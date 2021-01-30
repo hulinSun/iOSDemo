@@ -16,6 +16,9 @@
 		1A31830E25C5779900CBFF9B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A31830D25C5779900CBFF9B /* main.m */; };
 		1A31831825C5779900CBFF9B /* SomeDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A31831725C5779900CBFF9B /* SomeDemoTests.m */; };
 		1A31832325C5779900CBFF9B /* SomeDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A31832225C5779900CBFF9B /* SomeDemoUITests.m */; };
+		1A31833A25C5783300CBFF9B /* DequeuePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A31833925C5783300CBFF9B /* DequeuePool.m */; };
+		1A31834025C578CA00CBFF9B /* UIView+Pool.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A31833F25C578CA00CBFF9B /* UIView+Pool.m */; };
+		1A31834625C5795C00CBFF9B /* UIViewCube.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A31834525C5795C00CBFF9B /* UIViewCube.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +57,12 @@
 		1A31831E25C5779900CBFF9B /* SomeDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SomeDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A31832225C5779900CBFF9B /* SomeDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SomeDemoUITests.m; sourceTree = "<group>"; };
 		1A31832425C5779900CBFF9B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1A31833825C5783300CBFF9B /* DequeuePool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DequeuePool.h; sourceTree = "<group>"; };
+		1A31833925C5783300CBFF9B /* DequeuePool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DequeuePool.m; sourceTree = "<group>"; };
+		1A31833E25C578CA00CBFF9B /* UIView+Pool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+Pool.h"; sourceTree = "<group>"; };
+		1A31833F25C578CA00CBFF9B /* UIView+Pool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+Pool.m"; sourceTree = "<group>"; };
+		1A31834425C5795C00CBFF9B /* UIViewCube.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIViewCube.h; sourceTree = "<group>"; };
+		1A31834525C5795C00CBFF9B /* UIViewCube.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIViewCube.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +113,7 @@
 		1A3182FA25C5779900CBFF9B /* SomeDemo */ = {
 			isa = PBXGroup;
 			children = (
+				1A31833325C577D100CBFF9B /* UI */,
 				1A3182FB25C5779900CBFF9B /* AppDelegate.h */,
 				1A3182FC25C5779900CBFF9B /* AppDelegate.m */,
 				1A3182FE25C5779900CBFF9B /* SceneDelegate.h */,
@@ -135,6 +145,27 @@
 				1A31832425C5779900CBFF9B /* Info.plist */,
 			);
 			path = SomeDemoUITests;
+			sourceTree = "<group>";
+		};
+		1A31833325C577D100CBFF9B /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				1A31833425C577D900CBFF9B /* 重用机制 */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		1A31833425C577D900CBFF9B /* 重用机制 */ = {
+			isa = PBXGroup;
+			children = (
+				1A31833825C5783300CBFF9B /* DequeuePool.h */,
+				1A31833925C5783300CBFF9B /* DequeuePool.m */,
+				1A31833E25C578CA00CBFF9B /* UIView+Pool.h */,
+				1A31833F25C578CA00CBFF9B /* UIView+Pool.m */,
+				1A31834425C5795C00CBFF9B /* UIViewCube.h */,
+				1A31834525C5795C00CBFF9B /* UIViewCube.m */,
+			);
+			path = "重用机制";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -266,9 +297,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A31834025C578CA00CBFF9B /* UIView+Pool.m in Sources */,
+				1A31833A25C5783300CBFF9B /* DequeuePool.m in Sources */,
 				1A31830325C5779900CBFF9B /* ViewController.m in Sources */,
 				1A3182FD25C5779900CBFF9B /* AppDelegate.m in Sources */,
 				1A31830E25C5779900CBFF9B /* main.m in Sources */,
+				1A31834625C5795C00CBFF9B /* UIViewCube.m in Sources */,
 				1A31830025C5779900CBFF9B /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
